@@ -28,18 +28,173 @@ public class AnagrafeGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        IscrizioneStudente = new javax.swing.JPanel();
+        LBLNome = new javax.swing.JLabel();
+        LBLCognome = new javax.swing.JLabel();
+        LBLMatricola = new javax.swing.JLabel();
+        TXTNome = new javax.swing.JTextField();
+        TXTCognome = new javax.swing.JTextField();
+        TXTMatricola = new javax.swing.JTextField();
+        Titolo = new javax.swing.JPanel();
+        LBLTitolo = new javax.swing.JLabel();
+        PannelloBottoni = new javax.swing.JPanel();
+        BTNConferma = new javax.swing.JButton();
+        BTNElimina = new javax.swing.JButton();
+        BTNCrea = new javax.swing.JButton();
+        BTNCarica = new javax.swing.JButton();
+        BTNSalva = new javax.swing.JButton();
+        DisplayAnagrafe = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        TXTAnagrafe = new javax.swing.JTextArea();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Anagrafe Scolastica");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        IscrizioneStudente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        LBLNome.setText("Nome:");
+
+        LBLCognome.setText("Cognome:");
+
+        LBLMatricola.setText("Matricola:");
+
+        javax.swing.GroupLayout IscrizioneStudenteLayout = new javax.swing.GroupLayout(IscrizioneStudente);
+        IscrizioneStudente.setLayout(IscrizioneStudenteLayout);
+        IscrizioneStudenteLayout.setHorizontalGroup(
+            IscrizioneStudenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(IscrizioneStudenteLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(IscrizioneStudenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(IscrizioneStudenteLayout.createSequentialGroup()
+                        .addComponent(LBLNome, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40)
+                        .addComponent(TXTNome, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE))
+                    .addGroup(IscrizioneStudenteLayout.createSequentialGroup()
+                        .addComponent(LBLMatricola)
+                        .addGap(47, 47, 47)
+                        .addComponent(TXTMatricola))
+                    .addGroup(IscrizioneStudenteLayout.createSequentialGroup()
+                        .addComponent(LBLCognome)
+                        .addGap(44, 44, 44)
+                        .addComponent(TXTCognome)))
+                .addContainerGap())
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        IscrizioneStudenteLayout.setVerticalGroup(
+            IscrizioneStudenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, IscrizioneStudenteLayout.createSequentialGroup()
+                .addContainerGap(16, Short.MAX_VALUE)
+                .addGroup(IscrizioneStudenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(LBLNome)
+                    .addComponent(TXTNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addGroup(IscrizioneStudenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(LBLCognome)
+                    .addComponent(TXTCognome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addGroup(IscrizioneStudenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(LBLMatricola)
+                    .addComponent(TXTMatricola, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(14, 14, 14))
         );
+
+        getContentPane().add(IscrizioneStudente, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 200, 180));
+
+        Titolo.setBackground(new java.awt.Color(51, 255, 0));
+        Titolo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        LBLTitolo.setFont(new java.awt.Font("Sylfaen", 0, 24)); // NOI18N
+        LBLTitolo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LBLTitolo.setText("Anagrafe scolastica");
+
+        javax.swing.GroupLayout TitoloLayout = new javax.swing.GroupLayout(Titolo);
+        Titolo.setLayout(TitoloLayout);
+        TitoloLayout.setHorizontalGroup(
+            TitoloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TitoloLayout.createSequentialGroup()
+                .addComponent(LBLTitolo, javax.swing.GroupLayout.DEFAULT_SIZE, 1040, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        TitoloLayout.setVerticalGroup(
+            TitoloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TitoloLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(LBLTitolo, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        getContentPane().add(Titolo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1050, 60));
+
+        PannelloBottoni.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        BTNConferma.setText("Conferma studente");
+
+        BTNElimina.setText("Elimina studente");
+
+        BTNCrea.setText("Cerca studente");
+
+        BTNCarica.setText("Carica file");
+
+        BTNSalva.setText("Salva file");
+
+        javax.swing.GroupLayout PannelloBottoniLayout = new javax.swing.GroupLayout(PannelloBottoni);
+        PannelloBottoni.setLayout(PannelloBottoniLayout);
+        PannelloBottoniLayout.setHorizontalGroup(
+            PannelloBottoniLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PannelloBottoniLayout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addComponent(BTNConferma)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                .addComponent(BTNElimina)
+                .addGap(73, 73, 73)
+                .addComponent(BTNCrea)
+                .addGap(189, 189, 189)
+                .addComponent(BTNCarica)
+                .addGap(18, 18, 18)
+                .addComponent(BTNSalva)
+                .addGap(75, 75, 75))
+        );
+        PannelloBottoniLayout.setVerticalGroup(
+            PannelloBottoniLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PannelloBottoniLayout.createSequentialGroup()
+                .addContainerGap(38, Short.MAX_VALUE)
+                .addGroup(PannelloBottoniLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BTNConferma)
+                    .addComponent(BTNElimina)
+                    .addComponent(BTNCrea)
+                    .addComponent(BTNCarica)
+                    .addComponent(BTNSalva))
+                .addGap(35, 35, 35))
+        );
+
+        getContentPane().add(PannelloBottoni, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 1020, -1));
+
+        DisplayAnagrafe.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        TXTAnagrafe.setColumns(20);
+        TXTAnagrafe.setRows(5);
+        TXTAnagrafe.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        TXTAnagrafe.setEnabled(false);
+        jScrollPane1.setViewportView(TXTAnagrafe);
+
+        javax.swing.GroupLayout DisplayAnagrafeLayout = new javax.swing.GroupLayout(DisplayAnagrafe);
+        DisplayAnagrafe.setLayout(DisplayAnagrafeLayout);
+        DisplayAnagrafeLayout.setHorizontalGroup(
+            DisplayAnagrafeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DisplayAnagrafeLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 774, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        DisplayAnagrafeLayout.setVerticalGroup(
+            DisplayAnagrafeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DisplayAnagrafeLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        getContentPane().add(DisplayAnagrafe, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, 790, 180));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -70,5 +225,23 @@ public class AnagrafeGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BTNCarica;
+    private javax.swing.JButton BTNConferma;
+    private javax.swing.JButton BTNCrea;
+    private javax.swing.JButton BTNElimina;
+    private javax.swing.JButton BTNSalva;
+    private javax.swing.JPanel DisplayAnagrafe;
+    private javax.swing.JPanel IscrizioneStudente;
+    private javax.swing.JLabel LBLCognome;
+    private javax.swing.JLabel LBLMatricola;
+    private javax.swing.JLabel LBLNome;
+    private javax.swing.JLabel LBLTitolo;
+    private javax.swing.JPanel PannelloBottoni;
+    private javax.swing.JTextArea TXTAnagrafe;
+    private javax.swing.JTextField TXTCognome;
+    private javax.swing.JTextField TXTMatricola;
+    private javax.swing.JTextField TXTNome;
+    private javax.swing.JPanel Titolo;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
