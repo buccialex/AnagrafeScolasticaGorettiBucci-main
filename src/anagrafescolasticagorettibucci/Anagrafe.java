@@ -23,31 +23,43 @@ public class Anagrafe {
     }
 
     public boolean aggiungiStudente(Studente s) {
-        if(this.insiemeMatricole.contains(s.getMatricola())){
+        if(this.mappaStudenti.containsKey(s.getMatricola())){
             return false;
         }
         this.insiemeMatricole.add(s.getMatricola());
         this.listaStudenti.add(s);
         this.mappaStudenti.put(s.getMatricola(), s);
+        return true;
 
     }
 
     public boolean eliminaStudente(String matricola) {
-        if(this.mappaStudenti.containsValue(matricola)){
+        if (this.mappaStudenti.containsKey(matricola)) {
+            Studente s = this.mappaStudenti.get(matricola); 
             this.mappaStudenti.remove(matricola);
             this.insiemeMatricole.remove(matricola);
-            this.listaStudenti.remove();
+            this.listaStudenti.remove(s); 
+            return true;
         }
+        return false;
+       
     }
 
     public Studente cercaStudente(String matricola) {
-        
+        if(mappaStudenti.containsKey(matricola)){
+            return mappaStudenti.get(matricola);
+        }
+        return null;
     }
     
     
 
     public int numeroStudenti() {
         return this.listaStudenti.size();
+    }
+    
+    public Collection<Studente> getTuttiStudenti(){
+        return mappaStudenti.values();
     }
 
 }
