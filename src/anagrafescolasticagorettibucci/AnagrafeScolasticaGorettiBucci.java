@@ -8,13 +8,18 @@ package anagrafescolasticagorettibucci;
  *
  * @author goretti.leonardo
  */
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.SwingUtilities;
+import java.awt.FlowLayout;
+        
 public class AnagrafeScolasticaGorettiBucci {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+         AnagrafeGUI f = new AnagrafeGUI();
+         f.setVisible(true);
     }
-    
 }
