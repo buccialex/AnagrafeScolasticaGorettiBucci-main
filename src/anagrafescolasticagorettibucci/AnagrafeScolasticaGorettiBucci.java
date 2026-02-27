@@ -12,14 +12,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
 import java.awt.FlowLayout;
-        
+
 public class AnagrafeScolasticaGorettiBucci {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-         AnagrafeGUI f = new AnagrafeGUI();
-         f.setVisible(true);
+        AnagrafeGUI f = new AnagrafeGUI();
+        f.setVisible(true);
     }
 }

@@ -23,7 +23,7 @@ public class Anagrafe {
     }
 
     public boolean aggiungiStudente(Studente s) {
-        if(this.mappaStudenti.containsKey(s.getMatricola())){
+        if (this.mappaStudenti.containsKey(s.getMatricola())) {
             return false;
         }
         this.insiemeMatricole.add(s.getMatricola());
@@ -35,30 +35,28 @@ public class Anagrafe {
 
     public boolean eliminaStudente(String matricola) {
         if (this.mappaStudenti.containsKey(matricola)) {
-            Studente s = this.mappaStudenti.get(matricola); 
+            Studente s = this.mappaStudenti.get(matricola);
             this.mappaStudenti.remove(matricola);
             this.insiemeMatricole.remove(matricola);
-            this.listaStudenti.remove(s); 
+            this.listaStudenti.remove(s);
             return true;
         }
         return false;
-       
+
     }
 
     public Studente cercaStudente(String matricola) {
-        if(mappaStudenti.containsKey(matricola)){
+        if (mappaStudenti.containsKey(matricola)) {
             return mappaStudenti.get(matricola);
         }
         return null;
     }
-    
-    
 
     public int numeroStudenti() {
         return this.listaStudenti.size();
     }
-    
-    public Collection<Studente> getTuttiStudenti(){
+
+    public Collection<Studente> getTuttiStudenti() {
         return mappaStudenti.values();
     }
 

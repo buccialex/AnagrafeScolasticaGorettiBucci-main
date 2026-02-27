@@ -9,7 +9,7 @@ package anagrafescolasticagorettibucci;
  * @author goretti.leonardo
  */
 public class AnagrafeGUI extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(AnagrafeGUI.class.getName());
 
     /**

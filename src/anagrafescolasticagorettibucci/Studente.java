@@ -9,6 +9,7 @@ package anagrafescolasticagorettibucci;
  * @author goretti.leonardo
  */
 public class Studente {
+
     String nome, cognome, matricola;
 
     public Studente(String nome, String cognome, String matricola) {
@@ -45,7 +46,5 @@ public class Studente {
     public String toString() {
         return "Studente{" + "nome=" + nome + ", cognome=" + cognome + ", matricola=" + matricola + '}';
     }
-    
-    
-    
+
 }
