@@ -4,6 +4,8 @@
  */
 package anagrafescolasticagorettibucci;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author goretti.leonardo
@@ -18,6 +20,7 @@ public class AnagrafeGUI extends javax.swing.JFrame {
     public AnagrafeGUI() {
         initComponents();
         anagrafe = new Anagrafe();
+        file = new GestioneFile();
     }
 
     /**
@@ -117,6 +120,11 @@ public class AnagrafeGUI extends javax.swing.JFrame {
         BTNCrea.setBounds(469, 40, 109, 23);
 
         BTNCarica.setText("Carica file");
+        BTNCarica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTNCaricaActionPerformed(evt);
+            }
+        });
         PannelloBottoni.add(BTNCarica);
         BTNCarica.setBounds(767, 40, 82, 23);
 
@@ -210,8 +218,17 @@ public class AnagrafeGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_BTNCreaActionPerformed
 
     private void BTNSalvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNSalvaActionPerformed
-        
+
+        file.salvaSuFile("anagrafe.txt", anagrafe.getTuttiStudenti());
     }//GEN-LAST:event_BTNSalvaActionPerformed
+
+    private void BTNCaricaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNCaricaActionPerformed
+        ArrayList<Studente> lista = file.caricaDaFile("anagrafe.txt");
+        for (Studente s : lista) {
+            anagrafe.aggiungiStudente(s);  // ← questo mancava!
+        }
+        aggiornaTabella();
+    }//GEN-LAST:event_BTNCaricaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -239,6 +256,7 @@ public class AnagrafeGUI extends javax.swing.JFrame {
     }
 
     private Anagrafe anagrafe;
+    private GestioneFile file;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BTNCarica;
     private javax.swing.JButton BTNConferma;
