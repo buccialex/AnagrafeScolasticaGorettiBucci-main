@@ -44,8 +44,8 @@ public class AnagrafeGUI extends javax.swing.JFrame {
         BTNCarica = new javax.swing.JButton();
         BTNSalva = new javax.swing.JButton();
         DisplayAnagrafe = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        TXTAnagrafe = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        TBLAnagrafe = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Anagrafe Scolastica");
@@ -171,11 +171,18 @@ public class AnagrafeGUI extends javax.swing.JFrame {
 
         DisplayAnagrafe.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        TXTAnagrafe.setColumns(20);
-        TXTAnagrafe.setRows(5);
-        TXTAnagrafe.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        TXTAnagrafe.setEnabled(false);
-        jScrollPane1.setViewportView(TXTAnagrafe);
+        TBLAnagrafe.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Matricola", "Nome", "Cognome"
+            }
+        ));
+        jScrollPane2.setViewportView(TBLAnagrafe);
 
         javax.swing.GroupLayout DisplayAnagrafeLayout = new javax.swing.GroupLayout(DisplayAnagrafe);
         DisplayAnagrafe.setLayout(DisplayAnagrafeLayout);
@@ -183,15 +190,15 @@ public class AnagrafeGUI extends javax.swing.JFrame {
             DisplayAnagrafeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DisplayAnagrafeLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 774, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 774, Short.MAX_VALUE)
                 .addContainerGap())
         );
         DisplayAnagrafeLayout.setVerticalGroup(
             DisplayAnagrafeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DisplayAnagrafeLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         getContentPane().add(DisplayAnagrafe, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, 790, 180));
@@ -237,11 +244,11 @@ public class AnagrafeGUI extends javax.swing.JFrame {
     private javax.swing.JLabel LBLNome;
     private javax.swing.JLabel LBLTitolo;
     private javax.swing.JPanel PannelloBottoni;
-    private javax.swing.JTextArea TXTAnagrafe;
+    private javax.swing.JTable TBLAnagrafe;
     private javax.swing.JTextField TXTCognome;
     private javax.swing.JTextField TXTMatricola;
     private javax.swing.JTextField TXTNome;
     private javax.swing.JPanel Titolo;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }
