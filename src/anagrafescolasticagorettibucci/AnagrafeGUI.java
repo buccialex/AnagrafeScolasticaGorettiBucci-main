@@ -17,6 +17,7 @@ public class AnagrafeGUI extends javax.swing.JFrame {
      */
     public AnagrafeGUI() {
         initComponents();
+        anagrafe = new Anagrafe();
     }
 
     /**
@@ -49,127 +50,89 @@ public class AnagrafeGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Anagrafe Scolastica");
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(null);
 
-        IscrizioneStudente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        IscrizioneStudente.setLayout(null);
 
         LBLNome.setText("Nome:");
+        IscrizioneStudente.add(LBLNome);
+        LBLNome.setBounds(8, 30, 60, 16);
 
         LBLCognome.setText("Cognome:");
+        IscrizioneStudente.add(LBLCognome);
+        LBLCognome.setBounds(8, 86, 56, 16);
 
         LBLMatricola.setText("Matricola:");
+        IscrizioneStudente.add(LBLMatricola);
+        LBLMatricola.setBounds(8, 142, 53, 16);
+        IscrizioneStudente.add(TXTNome);
+        TXTNome.setBounds(108, 30, 84, 22);
+        IscrizioneStudente.add(TXTCognome);
+        TXTCognome.setBounds(108, 86, 84, 22);
+        IscrizioneStudente.add(TXTMatricola);
+        TXTMatricola.setBounds(108, 142, 84, 22);
 
-        javax.swing.GroupLayout IscrizioneStudenteLayout = new javax.swing.GroupLayout(IscrizioneStudente);
-        IscrizioneStudente.setLayout(IscrizioneStudenteLayout);
-        IscrizioneStudenteLayout.setHorizontalGroup(
-            IscrizioneStudenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(IscrizioneStudenteLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(IscrizioneStudenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(IscrizioneStudenteLayout.createSequentialGroup()
-                        .addComponent(LBLNome, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40)
-                        .addComponent(TXTNome, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE))
-                    .addGroup(IscrizioneStudenteLayout.createSequentialGroup()
-                        .addComponent(LBLMatricola)
-                        .addGap(47, 47, 47)
-                        .addComponent(TXTMatricola))
-                    .addGroup(IscrizioneStudenteLayout.createSequentialGroup()
-                        .addComponent(LBLCognome)
-                        .addGap(44, 44, 44)
-                        .addComponent(TXTCognome)))
-                .addContainerGap())
-        );
-        IscrizioneStudenteLayout.setVerticalGroup(
-            IscrizioneStudenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, IscrizioneStudenteLayout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
-                .addGroup(IscrizioneStudenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(LBLNome)
-                    .addComponent(TXTNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
-                .addGroup(IscrizioneStudenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(LBLCognome)
-                    .addComponent(TXTCognome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
-                .addGroup(IscrizioneStudenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(LBLMatricola)
-                    .addComponent(TXTMatricola, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(14, 14, 14))
-        );
-
-        getContentPane().add(IscrizioneStudente, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 200, 180));
+        getContentPane().add(IscrizioneStudente);
+        IscrizioneStudente.setBounds(20, 90, 200, 180);
 
         Titolo.setBackground(new java.awt.Color(51, 255, 0));
-        Titolo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Titolo.setLayout(null);
 
         LBLTitolo.setFont(new java.awt.Font("Sylfaen", 0, 24)); // NOI18N
         LBLTitolo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LBLTitolo.setText("Anagrafe scolastica");
+        Titolo.add(LBLTitolo);
+        LBLTitolo.setBounds(2, 8, 1040, 44);
 
-        javax.swing.GroupLayout TitoloLayout = new javax.swing.GroupLayout(Titolo);
-        Titolo.setLayout(TitoloLayout);
-        TitoloLayout.setHorizontalGroup(
-            TitoloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(TitoloLayout.createSequentialGroup()
-                .addComponent(LBLTitolo, javax.swing.GroupLayout.DEFAULT_SIZE, 1040, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        TitoloLayout.setVerticalGroup(
-            TitoloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TitoloLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(LBLTitolo, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        getContentPane().add(Titolo);
+        Titolo.setBounds(0, 0, 1050, 60);
 
-        getContentPane().add(Titolo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1050, 60));
-
-        PannelloBottoni.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        PannelloBottoni.setLayout(null);
 
         BTNConferma.setText("Conferma studente");
+        BTNConferma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTNConfermaActionPerformed(evt);
+            }
+        });
+        PannelloBottoni.add(BTNConferma);
+        BTNConferma.setBounds(49, 40, 132, 23);
 
         BTNElimina.setText("Elimina studente");
+        BTNElimina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTNEliminaActionPerformed(evt);
+            }
+        });
+        PannelloBottoni.add(BTNElimina);
+        BTNElimina.setBounds(278, 40, 118, 23);
 
         BTNCrea.setText("Cerca studente");
+        BTNCrea.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTNCreaActionPerformed(evt);
+            }
+        });
+        PannelloBottoni.add(BTNCrea);
+        BTNCrea.setBounds(469, 40, 109, 23);
 
         BTNCarica.setText("Carica file");
+        PannelloBottoni.add(BTNCarica);
+        BTNCarica.setBounds(767, 40, 82, 23);
 
         BTNSalva.setText("Salva file");
+        BTNSalva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTNSalvaActionPerformed(evt);
+            }
+        });
+        PannelloBottoni.add(BTNSalva);
+        BTNSalva.setBounds(867, 40, 76, 23);
 
-        javax.swing.GroupLayout PannelloBottoniLayout = new javax.swing.GroupLayout(PannelloBottoni);
-        PannelloBottoni.setLayout(PannelloBottoniLayout);
-        PannelloBottoniLayout.setHorizontalGroup(
-            PannelloBottoniLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PannelloBottoniLayout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(BTNConferma)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
-                .addComponent(BTNElimina)
-                .addGap(73, 73, 73)
-                .addComponent(BTNCrea)
-                .addGap(189, 189, 189)
-                .addComponent(BTNCarica)
-                .addGap(18, 18, 18)
-                .addComponent(BTNSalva)
-                .addGap(75, 75, 75))
-        );
-        PannelloBottoniLayout.setVerticalGroup(
-            PannelloBottoniLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PannelloBottoniLayout.createSequentialGroup()
-                .addContainerGap(38, Short.MAX_VALUE)
-                .addGroup(PannelloBottoniLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BTNConferma)
-                    .addComponent(BTNElimina)
-                    .addComponent(BTNCrea)
-                    .addComponent(BTNCarica)
-                    .addComponent(BTNSalva))
-                .addGap(35, 35, 35))
-        );
+        getContentPane().add(PannelloBottoni);
+        PannelloBottoni.setBounds(20, 290, 1020, 100);
 
-        getContentPane().add(PannelloBottoni, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 1020, -1));
-
-        DisplayAnagrafe.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        DisplayAnagrafe.setLayout(null);
 
         TBLAnagrafe.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -182,29 +145,73 @@ public class AnagrafeGUI extends javax.swing.JFrame {
                 "Matricola", "Nome", "Cognome"
             }
         ));
+        TBLAnagrafe.setEnabled(false);
         jScrollPane2.setViewportView(TBLAnagrafe);
 
-        javax.swing.GroupLayout DisplayAnagrafeLayout = new javax.swing.GroupLayout(DisplayAnagrafe);
-        DisplayAnagrafe.setLayout(DisplayAnagrafeLayout);
-        DisplayAnagrafeLayout.setHorizontalGroup(
-            DisplayAnagrafeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(DisplayAnagrafeLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 774, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        DisplayAnagrafeLayout.setVerticalGroup(
-            DisplayAnagrafeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(DisplayAnagrafeLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        DisplayAnagrafe.add(jScrollPane2);
+        jScrollPane2.setBounds(8, 8, 774, 166);
 
-        getContentPane().add(DisplayAnagrafe, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, 790, 180));
+        getContentPane().add(DisplayAnagrafe);
+        DisplayAnagrafe.setBounds(250, 90, 790, 180);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void aggiornaTabella() {
+        javax.swing.table.DefaultTableModel model
+                = (javax.swing.table.DefaultTableModel) TBLAnagrafe.getModel();
+        model.setRowCount(0); // svuota la tabella
+        for (Studente s : anagrafe.getTuttiStudenti()) {
+            model.addRow(new Object[]{s.getMatricola(), s.getNome(), s.getCognome()});
+        }
+    }
+
+
+    private void BTNConfermaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNConfermaActionPerformed
+        String nome = TXTNome.getText().trim();
+        String cognome = TXTCognome.getText().trim();
+        String matricola = TXTMatricola.getText().trim();
+
+        if (nome.isEmpty() || cognome.isEmpty() || matricola.isEmpty()) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Compila tutti i campi!");
+            return;
+        }
+
+        Studente s = new Studente(nome, cognome, matricola);
+        if (anagrafe.aggiungiStudente(s)) {
+            aggiornaTabella();
+            TXTNome.setText("");
+            TXTCognome.setText("");
+            TXTMatricola.setText("");
+        } else {
+            javax.swing.JOptionPane.showMessageDialog(this, "Matricola già esistente!");
+        }
+    }//GEN-LAST:event_BTNConfermaActionPerformed
+
+    private void BTNEliminaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNEliminaActionPerformed
+        if (anagrafe.eliminaStudente(TXTMatricola.getText())) {
+            aggiornaTabella();
+
+        } else {
+            javax.swing.JOptionPane.showMessageDialog(this, "lo studente selezionato non esiste");
+        }
+
+
+    }//GEN-LAST:event_BTNEliminaActionPerformed
+
+    private void BTNCreaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNCreaActionPerformed
+        try {
+            TXTNome.setText(anagrafe.cercaStudente(TXTMatricola.getText()).getNome());
+            TXTCognome.setText(anagrafe.cercaStudente(TXTMatricola.getText()).getCognome());
+        } catch (java.lang.NullPointerException e) {
+            javax.swing.JOptionPane.showMessageDialog(this, "lo studente che vuoi cercare non esiste");
+        }
+
+    }//GEN-LAST:event_BTNCreaActionPerformed
+
+    private void BTNSalvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNSalvaActionPerformed
+        
+    }//GEN-LAST:event_BTNSalvaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -231,6 +238,7 @@ public class AnagrafeGUI extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(() -> new AnagrafeGUI().setVisible(true));
     }
 
+    private Anagrafe anagrafe;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BTNCarica;
     private javax.swing.JButton BTNConferma;
