@@ -12,6 +12,11 @@ public class GestioneFile {
     private FileWriter fw = null;
     private PrintWriter pw = null;
 
+    /**
+     * Metodo che legge il file e lo carica nella tabella
+     * @param nomeFile
+     * @return 
+     */
     public ArrayList<Studente> caricaDaFile(String nomeFile) {
         ArrayList<Studente> lista = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(nomeFile))) {
@@ -33,6 +38,11 @@ public class GestioneFile {
         return lista;
     }
 
+    /**
+     * Metodo che salva i dati contenuti sulla tabella nel file
+     * @param nomeFile
+     * @param studenti 
+     */
     public void salvaSuFile(String nomeFile, Collection<Studente> studenti) {
         try {
             fw = new FileWriter(nomeFile);

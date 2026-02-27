@@ -16,7 +16,8 @@ import java.awt.FlowLayout;
 public class AnagrafeScolasticaGorettiBucci {
 
     /**
-     * @param args the command line arguments
+     * Metodo che avvia l'interfaccia
+     * @param args 
      */
     public static void main(String[] args) {
         AnagrafeGUI f = new AnagrafeGUI();

@@ -15,7 +15,7 @@ public class AnagrafeGUI extends javax.swing.JFrame {
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(AnagrafeGUI.class.getName());
 
     /**
-     * Creates new form AnagrafeGUI
+     * Crea il form
      */
     public AnagrafeGUI() {
         initComponents();
@@ -169,6 +169,9 @@ public class AnagrafeGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Aggiorna la tabella con i dati degli studenti quando per esempio vengono aggiunti
+     */
     private void aggiornaTabella() {
         javax.swing.table.DefaultTableModel model
                 = (javax.swing.table.DefaultTableModel) TBLAnagrafe.getModel();
@@ -179,6 +182,10 @@ public class AnagrafeGUI extends javax.swing.JFrame {
     }
 
 
+    /**
+     * Serve ad inviare i dati dello studente
+     * @param evt 
+     */
     private void BTNConfermaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNConfermaActionPerformed
         String nome = TXTNome.getText().trim();
         String cognome = TXTCognome.getText().trim();
@@ -200,6 +207,10 @@ public class AnagrafeGUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_BTNConfermaActionPerformed
 
+    /**
+     * Elimina uno studente in base alla matricola
+     * @param evt 
+     */
     private void BTNEliminaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNEliminaActionPerformed
         if (anagrafe.eliminaStudente(TXTMatricola.getText())) {
             aggiornaTabella();
@@ -211,6 +222,10 @@ public class AnagrafeGUI extends javax.swing.JFrame {
 
     }//GEN-LAST:event_BTNEliminaActionPerformed
 
+    /**
+     * Cerca lo studente in base alla matricola "ho sbgliato a scrivere il nome del bottone volevo dire Cerca"
+     * @param evt 
+     */
     private void BTNCreaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNCreaActionPerformed
         try {
             TXTNome.setText(anagrafe.cercaStudente(TXTMatricola.getText()).getNome());
@@ -221,15 +236,23 @@ public class AnagrafeGUI extends javax.swing.JFrame {
 
     }//GEN-LAST:event_BTNCreaActionPerformed
 
+    /**
+     * Salva la lista degli studenti nel file anagrafe.txt
+     * @param evt 
+     */
     private void BTNSalvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNSalvaActionPerformed
 
         file.salvaSuFile("anagrafe.txt", anagrafe.getTuttiStudenti());
     }//GEN-LAST:event_BTNSalvaActionPerformed
 
+    /**
+     * Carica la tabella dal file
+     * @param evt 
+     */
     private void BTNCaricaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNCaricaActionPerformed
         ArrayList<Studente> lista = file.caricaDaFile("anagrafe.txt");
         for (Studente s : lista) {
-            anagrafe.aggiungiStudente(s);  // ← questo mancava!
+            anagrafe.aggiungiStudente(s);  
         }
         aggiornaTabella();
     }//GEN-LAST:event_BTNCaricaActionPerformed
