@@ -53,6 +53,10 @@ public class AnagrafeGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Anagrafe Scolastica");
+        setMinimumSize(new java.awt.Dimension(1046, 445));
+        setPreferredSize(new java.awt.Dimension(1046, 445));
+        setResizable(false);
+        setSize(new java.awt.Dimension(1046, 445));
         getContentPane().setLayout(null);
 
         IscrizioneStudente.setLayout(null);
@@ -63,11 +67,11 @@ public class AnagrafeGUI extends javax.swing.JFrame {
 
         LBLCognome.setText("Cognome:");
         IscrizioneStudente.add(LBLCognome);
-        LBLCognome.setBounds(8, 86, 56, 16);
+        LBLCognome.setBounds(8, 86, 80, 16);
 
         LBLMatricola.setText("Matricola:");
         IscrizioneStudente.add(LBLMatricola);
-        LBLMatricola.setBounds(8, 142, 53, 16);
+        LBLMatricola.setBounds(8, 142, 80, 16);
         IscrizioneStudente.add(TXTNome);
         TXTNome.setBounds(108, 30, 84, 22);
         IscrizioneStudente.add(TXTCognome);
@@ -99,7 +103,7 @@ public class AnagrafeGUI extends javax.swing.JFrame {
             }
         });
         PannelloBottoni.add(BTNConferma);
-        BTNConferma.setBounds(49, 40, 132, 23);
+        BTNConferma.setBounds(49, 40, 180, 23);
 
         BTNElimina.setText("Elimina studente");
         BTNElimina.addActionListener(new java.awt.event.ActionListener() {
@@ -108,7 +112,7 @@ public class AnagrafeGUI extends javax.swing.JFrame {
             }
         });
         PannelloBottoni.add(BTNElimina);
-        BTNElimina.setBounds(278, 40, 118, 23);
+        BTNElimina.setBounds(278, 40, 160, 23);
 
         BTNCrea.setText("Cerca studente");
         BTNCrea.addActionListener(new java.awt.event.ActionListener() {
@@ -117,7 +121,7 @@ public class AnagrafeGUI extends javax.swing.JFrame {
             }
         });
         PannelloBottoni.add(BTNCrea);
-        BTNCrea.setBounds(469, 40, 109, 23);
+        BTNCrea.setBounds(469, 40, 170, 23);
 
         BTNCarica.setText("Carica file");
         BTNCarica.addActionListener(new java.awt.event.ActionListener() {
@@ -126,7 +130,7 @@ public class AnagrafeGUI extends javax.swing.JFrame {
             }
         });
         PannelloBottoni.add(BTNCarica);
-        BTNCarica.setBounds(767, 40, 82, 23);
+        BTNCarica.setBounds(860, 20, 110, 23);
 
         BTNSalva.setText("Salva file");
         BTNSalva.addActionListener(new java.awt.event.ActionListener() {
@@ -135,7 +139,7 @@ public class AnagrafeGUI extends javax.swing.JFrame {
             }
         });
         PannelloBottoni.add(BTNSalva);
-        BTNSalva.setBounds(867, 40, 76, 23);
+        BTNSalva.setBounds(860, 60, 110, 23);
 
         getContentPane().add(PannelloBottoni);
         PannelloBottoni.setBounds(20, 290, 1020, 100);
